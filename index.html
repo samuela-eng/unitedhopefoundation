@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United Hope Foundation - Make a Difference</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    United Hope Foundation
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#stories">Discover</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#success-stories">Success Stories</a></li>
+                    <li><a href="#" id="analyticsBtn">Analytics</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="#" class="btn btn-outline" id="loginBtn">Log In</a>
+                    <a href="#" class="btn btn-primary" id="campaignBtn">Start a Campaign</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Image Carousel -->
+    <section class="hero">
+        <div class="hero-carousel" id="heroCarousel">
+            <!-- First image -->
+            <div class="carousel-slide active" style="background-image: url('https://images.unsplash.com/photo-1516627145497-ae69578cfc06?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')"></div>
+            <!-- Second image -->
+            <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')"></div>
+        </div>
+        <div class="container hero-content">
+            <h1>Make a Difference Today</h1>
+            <p>Join millions of people supporting meaningful causes and changing lives around the world. Your donation can create hope and transform communities.</p>
+            <a href="#stories" class="btn btn-primary btn-large pulse-animation">Donate Now</a>
+        </div>
+        <div class="carousel-nav" id="carouselNav">
+            <!-- Only two dots for two images -->
+            <button class="carousel-dot active"></button>
+            <button class="carousel-dot"></button>
+        </div>
+    </section>
+
+    <!-- Featured Stories -->
+    <section class="container" id="stories">
+        <h2 class="section-title">Featured Campaigns</h2>
+        <div class="stories-grid" id="storiesGrid">
+            <!-- Stories populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3>Fund a Campaign</h3>
+                    <p>Shared stories, follow your campaign, change a life.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Share With Friends</h3>
+                    <p>Spread the word on social media and through email to reach more supporters.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Donations Transparency</h3>
+                    <p>Follow our mini programs to see progress on your donations - you don't just donate, you're part of the journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>United Hope Foundation</h3>
+                    <p>Creating positive change through community support.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Campaigns</a></li>
+                        <li><a href="#">Impact</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> hello@unitedhope.org</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Hope Street</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 United Hope Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modern Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title">Welcome Back</h2>
+                <p class="modal-subtitle">Sign in to your account</p>
+            </div>
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Sign In</button>
+            </form>
+            <div class="divider">
+                <span>Or continue with</span>
+            </div>
+            <div class="social-login">
+                <button class="social-btn google">
+                    <i class="fab fa-google"></i>
+                    Google
+                </button>
+                <button class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    Facebook
+                </button>
+            </div>
+            <div class="form-footer">
+                Don't have an account? <a href="#" id="switchToSignup">Sign up</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modern Start Campaign Modal -->
+    <div class="modal" id="campaignModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title">Start a Campaign</h2>
+                <p class="modal-subtitle">Create your fundraising campaign in minutes</p>
+            </div>
+            <form class="campaign-form">
+                <div class="form-group">
+                    <label for="campaignTitle">Campaign Title</label>
+                    <input type="text" id="campaignTitle" placeholder="Enter campaign title" required>
+                </div>
+                <div class="form-group">
+                    <label for="campaignCategory">Category</label>
+                    <select id="campaignCategory" required>
+                        <option value="">Select category</option>
+                        <option value="medical">Medical</option>
+                        <option value="education">Education</option>
+                        <option value="environment">Environment</option>
+                        <option value="community">Community</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="campaignGoal">Funding Goal ($)</label>
+                    <input type="number" id="campaignGoal" placeholder="Enter target amount" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="campaignDescription">Campaign Story</label>
+                    <textarea id="campaignDescription" placeholder="Tell your story..." rows="4" required></textarea>
+                </div>
+                <div class="file-upload">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Upload campaign image</p>
+                    <input type="file" id="campaignImage" accept="image/*">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Create Campaign</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Donation Modal -->
+    <div class="modal donation-modal" id="donationModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title">Make a Donation</h2>
+                <p class="modal-subtitle" id="donationCampaignTitle">Support this important cause</p>
+            </div>
+            <form class="donation-form">
+                <div class="form-group">
+                    <label>Select Amount</label>
+                    <div class="donation-amounts">
+                        <div class="amount-option" data-amount="25">$25</div>
+                        <div class="amount-option" data-amount="50">$50</div>
+                        <div class="amount-option" data-amount="100">$100</div>
+                        <div class="amount-option" data-amount="250">$250</div>
+                        <div class="amount-option" data-amount="500">$500</div>
+                        <div class="amount-option" data-amount="1000">$1000</div>
+                    </div>
+                </div>
+                <div class="form-group custom-amount">
+                    <label for="customAmount">Or Enter Custom Amount</label>
+                    <input type="number" id="customAmount" placeholder="Enter amount in USD" min="1">
+                </div>
+                <div class="form-group">
+                    <label>Payment Method</label>
+                    <div class="payment-options">
+                        <div class="payment-option" data-payment="card">
+                            <div class="payment-icon">
+                                <i class="far fa-credit-card"></i>
+                            </div>
+                            <div class="payment-details">
+                                <div class="payment-name">Credit/Debit Card</div>
+                                <div class="payment-description">Pay securely with your card</div>
+                            </div>
+                        </div>
+                        <div class="payment-option" data-payment="paypal">
+                            <div class="payment-icon">
+                                <i class="fab fa-paypal"></i>
+                            </div>
+                            <div class="payment-details">
+                                <div class="payment-name">PayPal</div>
+                                <div class="payment-description">Fast and secure payment</div>
+                            </div>
+                        </div>
+                        <div class="payment-option" data-payment="bank">
+                            <div class="payment-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="payment-details">
+                                <div class="payment-name">Bank Transfer</div>
+                                <div class="payment-description">Direct bank transfer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Donate Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal success-modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2 class="success-title">Thank You!</h2>
+                <p class="success-message">Your generous donation is making a difference. You will be redirected to complete your payment.</p>
+                <button class="btn btn-primary" id="continueToPayment">Continue to Payment</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div class="dashboard-page" id="dashboardPage">
+        <button class="dashboard-close" id="dashboardClose">&times;</button>
+        <div class="dashboard">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="dashboard-logo">
+                    <i class="fas fa-hands-helping"></i>
+                    <h1>United Hope Foundation</h1>
+                </div>
+                <ul class="dashboard-nav-links">
+                    <li><a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-donate"></i> Donations</a></li>
+                    <li><a href="#"><i class="fas fa-campaignbell"></i> Campaigns</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Supporters</a></li>
+                    <li><a href="#"><i class="fas fa-chart-bar"></i> Analytics</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="dashboard-main-content">
+                <div class="dashboard-header">
+                    <h2>Campaign Dashboard</h2>
+                    <div class="user-profile">
+                        <div class="user-avatar">JD</div>
+                        <span>John Doe</span>
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div>
+                                <div class="stat-value">$124,580</div>
+                                <div class="stat-label">Total Donations</div>
+                            </div>
+                            <div class="stat-icon icon-donation">
+                                <i class="fas fa-donate"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div>
+                                <div class="stat-value">78%</div>
+                                <div class="stat-label">Goal Progress</div>
+                            </div>
+                            <div class="stat-icon icon-goal">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div>
+                                <div class="stat-value">2,847</div>
+                                <div class="stat-label">Supporters</div>
+                            </div>
+                            <div class="stat-icon icon-supporters">
+                                <i class="fas fa-users"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div>
+                                <div class="stat-value">1,240</div>
+                                <div class="stat-label">Lives Impacted</div>
+                            </div>
+                            <div class="stat-icon icon-impact">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="charts-container">
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Donation Trends</h3>
+                            <div class="chart-actions">
+                                <button class="active">Weekly</button>
+                                <button>Monthly</button>
+                                <button>Yearly</button>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="donationChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Campaign Distribution</h3>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="campaignChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="activity-card">
+                    <div class="chart-header">
+                        <h3>Recent Activity</h3>
+                    </div>
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <div class="activity-icon" style="background-color: var(--primary);">
+                                <i class="fas fa-donate"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>New Donation</h4>
+                                <p>John Smith donated $500</p>
+                            </div>
+                            <div class="activity-time">2 hours ago</div>
+                        </li>
+                        <li class="activity-item">
+                            <div class="activity-icon" style="background-color: #28a745;">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>New Supporter</h4>
+                                <p>Sarah Johnson joined the campaign</p>
+                            </div>
+                            <div class="activity-time">5 hours ago</div>
+                        </li>
+                        <li class="activity-item">
+                            <div class="activity-icon" style="background-color: #ff9f43;">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>Campaign Shared</h4>
+                                <p>Campaign shared 142 times on social media</p>
+                            </div>
+                            <div class="activity-time">1 day ago</div>
+                        </li>
+                        <li class="activity-item">
+                            <div class="activity-icon" style="background-color: var(--secondary);">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>Milestone Reached</h4>
+                                <p>Reached 75% of fundraising goal</p>
+                            </div>
+                            <div class="activity-time">2 days ago</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <script>
+        // ===== DATA =====
+        // Campaign data
+        const campaignData = [
+            {
+                id: 1,
+                category: "Medical",
+                title: "Help Mukansi Beat Cancer",
+                description: "Comprehensive cancer treatment and family support program for underserved communities.",
+                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+                raised: 32580,
+                goal: 50000,
+                progress: 65,
+                daysLeft: 45
+            },
+            {
+                id: 2,
+                category: "Education",
+                title: "Scholarships for Underprivileged Youth",
+                description: "Providing access to quality education for talented students from low-income families.",
+                image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+                raised: 21000,
+                goal: 50000,
+                progress: 42,
+                daysLeft: 28
+            },
+            {
+                id: 3,
+                category: "Community",
+                title: "Clean Water Initiative",
+                description: "Building wells and water purification systems for communities in need.",
+                image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+                raised: 78400,
+                goal: 100000,
+                progress: 78,
+                daysLeft: 15
+            }
+        ];
+
+        // ===== UTILITY FUNCTIONS =====
+        // Format numbers with commas
+        function formatNumber(num) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        // ===== HERO CAROUSEL =====
+        function initHeroCarousel() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            let currentIndex = 0;
+
+            // Set up click events for dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                });
+            });
+
+            // Auto-advance slides
+            setInterval(() => {
+                nextSlide();
+            }, 4000);
+
+            // Go to specific slide
+            function goToSlide(index) {
+                slides[currentIndex].classList.remove('active');
+                dots[currentIndex].classList.remove('active');
+                currentIndex = index;
+                slides[currentIndex].classList.add('active');
+                dots[currentIndex].classList.add('active');
+            }
+
+            // Go to next slide
+            function nextSlide() {
+                slides[currentIndex].classList.remove('active');
+                dots[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % slides.length;
+                slides[currentIndex].classList.add('active');
+                dots[currentIndex].classList.add('active');
+            }
+        }
+
+        // ===== DONATION SYSTEM =====
+        function initDonationSystem() {
+            const donationModal = document.getElementById('donationModal');
+            const successModal = document.getElementById('successModal');
+            const confettiCanvas = document.getElementById('confetti-canvas');
+            let selectedAmount = 0;
+            let selectedPayment = '';
+            let currentCampaign = null;
+
+            // Set up event listeners for donation form
+            function setupEventListeners() {
+                // Amount selection
+                document.querySelectorAll('.amount-option').forEach(option => {
+                    option.addEventListener('click', (e) => {
+                        document.querySelectorAll('.amount-option').forEach(opt => {
+                            opt.classList.remove('selected');
+                        });
+                        e.target.classList.add('selected');
+                        selectedAmount = parseInt(e.target.dataset.amount);
+                        document.getElementById('customAmount').value = '';
+                    });
+                });
+
+                // Custom amount
+                document.getElementById('customAmount').addEventListener('input', (e) => {
+                    if (e.target.value) {
+                        document.querySelectorAll('.amount-option').forEach(opt => {
+                            opt.classList.remove('selected');
+                        });
+                        selectedAmount = parseInt(e.target.value);
+                    }
+                });
+
+                // Payment selection
+                document.querySelectorAll('.payment-option').forEach(option => {
+                    option.addEventListener('click', (e) => {
+                        document.querySelectorAll('.payment-option').forEach(opt => {
+                            opt.classList.remove('selected');
+                        });
+                        e.target.closest('.payment-option').classList.add('selected');
+                        selectedPayment = e.target.closest('.payment-option').dataset.payment;
+                    });
+                });
+
+                // Donation form submission
+                document.querySelector('.donation-form').addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    processDonation();
+                });
+
+                // Continue to payment button
+                document.getElementById('continueToPayment').addEventListener('click', () => {
+                    redirectToPayment();
+                });
+            }
+
+            // Open donation modal for a specific campaign
+            function openDonationModal(campaign) {
+                currentCampaign = campaign;
+                document.getElementById('donationCampaignTitle').textContent = campaign.title;
+                resetDonationForm();
+                closeAllModals();
+                donationModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+
+            // Reset donation form
+            function resetDonationForm() {
+                selectedAmount = 0;
+                selectedPayment = '';
+                document.querySelectorAll('.amount-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                document.querySelectorAll('.payment-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                document.getElementById('customAmount').value = '';
+            }
+
+            // Process donation
+            function processDonation() {
+                // Validate form
+                if (!selectedAmount || selectedAmount <= 0) {
+                    alert('Please select or enter a valid donation amount.');
+                    return;
+                }
+
+                if (!selectedPayment) {
+                    alert('Please select a payment method.');
+                    return;
+                }
+
+                // Show confetti animation
+                showConfetti();
+
+                // Close donation modal and show success modal after a delay
+                setTimeout(() => {
+                    donationModal.style.display = 'none';
+                    successModal.style.display = 'flex';
+                }, 2000);
+            }
+
+            // Redirect to payment gateway
+            function redirectToPayment() {
+                // In a real implementation, this would redirect to the actual payment gateway
+                // For demo purposes, we'll just show an alert
+                alert(`Redirecting to ${selectedPayment} payment gateway to process your $${selectedAmount} donation for "${currentCampaign.title}"`);
+                
+                // Close the success modal
+                successModal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+
+            // Close all modals
+            function closeAllModals() {
+                donationModal.style.display = 'none';
+                successModal.style.display = 'none';
+            }
+
+            // Set up confetti canvas
+            function setupConfetti() {
+                // Set canvas dimensions
+                confettiCanvas.width = window.innerWidth;
+                confettiCanvas.height = window.innerHeight;
+                
+                window.addEventListener('resize', () => {
+                    confettiCanvas.width = window.innerWidth;
+                    confettiCanvas.height = window.innerHeight;
+                });
+            }
+
+            // Show confetti animation
+            function showConfetti() {
+                const canvas = confettiCanvas;
+                const ctx = canvas.getContext('2d');
+                canvas.style.display = 'block';
+                
+                // Confetti particles
+                const confetti = [];
+                const confettiCount = 150;
+                const gravity = 0.5;
+                const terminalVelocity = 5;
+                const drag = 0.075;
+                const colors = [
+                    { front: '#00a86b', back: '#008055' },
+                    { front: '#1a73e8', back: '#1557b0' },
+                    { front: '#ff9f43', back: '#e0862a' },
+                    { front: '#ee5a24', back: '#c4451b' },
+                    { front: '#9c27b0', back: '#7b1fa2' }
+                ];
+
+                // Initialize particles
+                for (let i = 0; i < confettiCount; i++) {
+                    confetti.push({
+                        color: colors[Math.floor(Math.random() * colors.length)],
+                        dimensions: {
+                            x: Math.random() * 10 + 10,
+                            y: Math.random() * 10 + 10
+                        },
+                        position: {
+                            x: Math.random() * canvas.width,
+                            y: canvas.height * 0.5 - Math.random() * canvas.height * 0.5
+                        },
+                        rotation: Math.random() * 2 * Math.PI,
+                        scale: {
+                            x: 1,
+                            y: 1
+                        },
+                        velocity: {
+                            x: Math.random() * 20 - 10,
+                            y: Math.random() * 20 - 20
+                        },
+                        wobble: Math.random() * 10
+                    });
+                }
+
+                // Animation function
+                let animationFrame;
+                let then = Date.now();
+
+                function update() {
+                    const now = Date.now();
+                    const delta = now - then;
+                    then = now;
+
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                    let stillFalling = false;
+
+                    for (let i = 0; i < confetti.length; i++) {
+                        const p = confetti[i];
+                        
+                        // Apply forces
+                        p.velocity.x -= p.velocity.x * drag;
+                        p.velocity.y = Math.min(p.velocity.y + gravity, terminalVelocity);
+                        p.velocity.x += Math.cos(p.wobble) * 0.1;
+
+                        // Update position
+                        p.position.x += p.velocity.x;
+                        p.position.y += p.velocity.y;
+
+                        // Apply rotation
+                        p.rotation += p.velocity.x * 0.05;
+
+                        // Check if still falling
+                        if (p.position.y < canvas.height) {
+                            stillFalling = true;
+                        }
+
+                        // Draw confetti
+                        ctx.save();
+                        ctx.translate(p.position.x, p.position.y);
+                        ctx.rotate(p.rotation);
+
+                        const width = p.dimensions.x * p.scale.x;
+                        const height = p.dimensions.y * p.scale.y;
+
+                        ctx.fillStyle = p.scale.y > 0 ? p.color.front : p.color.back;
+                        ctx.fillRect(-width / 2, -height / 2, width, height);
+
+                        ctx.restore();
+                    }
+
+                    if (stillFalling) {
+                        animationFrame = requestAnimationFrame(update);
+                    } else {
+                        // End animation
+                        cancelAnimationFrame(animationFrame);
+                        setTimeout(() => {
+                            canvas.style.display = 'none';
+                        }, 500);
+                    }
+                }
+
+                // Start animation
+                update();
+            }
+
+            // Initialize the donation system
+            setupEventListeners();
+            setupConfetti();
+
+            // Return public methods
+            return {
+                openDonationModal: openDonationModal
+            };
+        }
+
+        // ===== CAMPAIGN MANAGER =====
+        function initCampaignManager(donationSystem) {
+            const storiesGrid = document.querySelector('.stories-grid');
+            let charts = {};
+
+            // Render campaign cards
+            function renderCampaigns() {
+                storiesGrid.innerHTML = campaignData.map(campaign => `
+                    <div class="story-card" data-story-id="${campaign.id}">
+                        <img src="${campaign.image}" alt="${campaign.title}" class="story-image">
+                        <div class="story-content">
+                            <span class="story-category">${campaign.category}</span>
+                            <h3 class="story-title">${campaign.title}</h3>
+                            <p class="story-description">${campaign.description}</p>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: ${campaign.progress}%"></div>
+                                </div>
+                                <div class="progress-info">
+                                    <span>${campaign.progress}% funded</span>
+                                    <span>${campaign.daysLeft} days left</span>
+                                </div>
+                            </div>
+                            <div class="donation-info">
+                                <span class="amount">$${formatNumber(campaign.raised)} raised</span>
+                                <span>of $${formatNumber(campaign.goal)} goal</span>
+                            </div>
+                            <div class="story-actions">
+                                <button class="btn btn-primary donate-btn" data-story-id="${campaign.id}">
+                                    Donate Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            // Set up event listeners for campaign cards
+            function setupEventListeners() {
+                // Donation buttons
+                document.querySelectorAll('.donate-btn').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        const campaignId = parseInt(e.target.dataset.storyId);
+                        const campaign = campaignData.find(c => c.id === campaignId);
+                        if (campaign) {
+                            donationSystem.openDonationModal(campaign);
+                        }
+                    });
+                });
+            }
+
+            // Initialize the campaign manager
+            renderCampaigns();
+            setupEventListeners();
+        }
+
+        // ===== MODAL MANAGER =====
+        function initModalManager() {
+            const loginBtn = document.getElementById('loginBtn');
+            const campaignBtn = document.getElementById('campaignBtn');
+            const analyticsBtn = document.getElementById('analyticsBtn');
+            const loginModal = document.getElementById('loginModal');
+            const campaignModal = document.getElementById('campaignModal');
+            const donationModal = document.getElementById('donationModal');
+            const successModal = document.getElementById('successModal');
+            const dashboardPage = document.getElementById('dashboardPage');
+            const closeButtons = document.querySelectorAll('.close-modal');
+            const dashboardClose = document.getElementById('dashboardClose');
+
+            // Initialize modal system
+            function init() {
+                // Login modal
+                loginBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openModal(loginModal);
+                });
+
+                // Campaign modal
+                campaignBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openModal(campaignModal);
+                });
+
+                // Analytics button
+                analyticsBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openDashboard();
+                });
+
+                // Close modals
+                closeButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        closeAllModals();
+                    });
+                });
+
+                // Dashboard close
+                dashboardClose.addEventListener('click', () => {
+                    closeDashboard();
+                });
+
+                // Close on backdrop click
+                [loginModal, campaignModal, donationModal, successModal].forEach(modal => {
+                    modal.addEventListener('click', (e) => {
+                        if (e.target === modal) {
+                            closeAllModals();
+                        }
+                    });
+                });
+
+                // Close with Escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        if (dashboardPage.style.display === 'block') {
+                            closeDashboard();
+                        } else {
+                            closeAllModals();
+                        }
+                    }
+                });
+
+                // File upload preview
+                const fileUpload = document.querySelector('.file-upload');
+                const fileInput = document.getElementById('campaignImage');
+                
+                fileUpload.addEventListener('click', () => {
+                    fileInput.click();
+                });
+
+                fileInput.addEventListener('change', (e) => {
+                    if (e.target.files.length > 0) {
+                        fileUpload.innerHTML = `
+                            <i class="fas fa-check"></i>
+                            <p>Image selected</p>
+                        `;
+                    }
+                });
+            }
+
+            // Open a specific modal
+            function openModal(modal) {
+                closeAllModals();
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+
+            // Open dashboard
+            function openDashboard() {
+                closeAllModals();
+                initializeDashboardCharts();
+                dashboardPage.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+
+            // Close all modals
+            function closeAllModals() {
+                loginModal.style.display = 'none';
+                campaignModal.style.display = 'none';
+                donationModal.style.display = 'none';
+                successModal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+
+            // Close dashboard
+            function closeDashboard() {
+                dashboardPage.style.display = 'none';
+                document.body.style.overflow = '';
+                
+                // Destroy charts when dashboard closes
+                Object.values(window.dashboardCharts || {}).forEach(chart => {
+                    if (chart) chart.destroy();
+                });
+                window.dashboardCharts = {};
+            }
+
+            // Initialize dashboard charts
+            function initializeDashboardCharts() {
+                // Destroy existing charts
+                Object.values(window.dashboardCharts || {}).forEach(chart => {
+                    if (chart) chart.destroy();
+                });
+
+                // Donation Trends Chart
+                const donationCtx = document.getElementById('donationChart').getContext('2d');
+                window.dashboardCharts = window.dashboardCharts || {};
+                window.dashboardCharts.donation = new Chart(donationCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                        datasets: [{
+                            label: 'Donations ($)',
+                            data: [12000, 19000, 15000, 25000, 22000, 30000, 28000],
+                            borderColor: '#00a86b',
+                            backgroundColor: 'rgba(0, 168, 107, 0.1)',
+                            borderWidth: 2,
+                            fill: true,
+                            tension: 0.4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                grid: {
+                                    drawBorder: false
+                                }
+                            },
+                            x: {
+                                grid: {
+                                    display: false
+                                }
+                            }
+                        }
+                    }
+                });
+
+                // Campaign Distribution Chart
+                const campaignCtx = document.getElementById('campaignChart').getContext('2d');
+                window.dashboardCharts.campaign = new Chart(campaignCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Education', 'Healthcare', 'Environment', 'Emergency Relief'],
+                        datasets: [{
+                            data: [35, 25, 20, 20],
+                            backgroundColor: [
+                                '#00a86b',
+                                '#1a73e8',
+                                '#ff9f43',
+                                '#ee5a24'
+                            ],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom'
+                            }
+                        },
+                        cutout: '70%'
+                    }
+                });
+
+                // Add interactivity to chart period buttons
+                const periodButtons = document.querySelectorAll('.chart-actions button');
+                periodButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        periodButtons.forEach(btn => btn.classList.remove('active'));
+                        this.classList.add('active');
+                    });
+                });
+            }
+
+            // Initialize the modal manager
+            init();
+        }
+
+        // ===== INITIALIZE EVERYTHING =====
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize components
+            initHeroCarousel();
+            const donationSystem = initDonationSystem();
+            initCampaignManager(donationSystem);
+            initModalManager();
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
